@@ -1,18 +1,21 @@
 #!/usr/bin/expect
-# https://github.com/Jguer/yay?tab=readme-ov-file#Installation
+# uses makepkg to install Yay:
+# https://github.com/Jguer/yay#Installation
 # https://stackoverflow.com/questions/59686835/redirect-out-of-a-expect-spawned-process-to-a-log-file/59689925#59689925
 
 set password "u"
-set timeout 10
+set timeout 1200
+
 log_user 0
 log_file -a ./log
 
-spawn sudo -k
+#spawn sudo -k
+
 spawn makepkg -si
 expect "*?assword*"
 send -- "$password\n"
 
-#expect "Proceed with installation*?"
-#send -- "y\n"
+expect "Proceed with installation"
+send -- "y\r"
 
 expect eof

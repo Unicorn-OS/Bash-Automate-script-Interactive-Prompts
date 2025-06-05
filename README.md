@@ -1,4 +1,6 @@
 # Bash Automate (scipt) Interactive Prompts
+Use this to answer Questions asked by a shell command, to script the Answers automatically!
+
 https://www.google.com/search?q=bash+script+interactive+command
 
 # Guide:

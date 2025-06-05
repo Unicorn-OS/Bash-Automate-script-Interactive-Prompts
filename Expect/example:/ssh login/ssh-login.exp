@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+set user "me"
+set myhost "10.0.0.123"
+set PWD "u"
+
+spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $user@$myhost
+
+expect "password"
+send -- "$PWD\r"
+
+interact
+
+expect eof

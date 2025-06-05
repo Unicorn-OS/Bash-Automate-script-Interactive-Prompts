@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+# https://stackoverflow.com/questions/59686835/redirect-out-of-a-expect-spawned-process-to-a-log-file/59689925#59689925
+
+set password "u"
+set timeout 10
+log_user 0
+log_file -a /home/me/Downloads/log
+
+spawn sudo -k
+spawn makepkg -si
+expect "*?assword*"
+send -- "$password\n"
+expect eof

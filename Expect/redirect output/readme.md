@@ -1,3 +1,4 @@
+# Redirect output with: `cmd > output`
 sch: https://www.google.com/search?q=expect+spawn+redirect+output
 
 # Solution:

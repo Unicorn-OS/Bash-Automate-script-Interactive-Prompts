@@ -1,4 +1,4 @@
-# Bash-Script-Interactive-Prompts
+# Bash Automate (scipt) Interactive Prompts
 https://www.google.com/search?q=bash+script+interactive+command
 
 # Guide:

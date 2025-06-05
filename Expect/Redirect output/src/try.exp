@@ -1,0 +1,13 @@
+set password "u"
+set search_dir "/var/lib/libvirt/images"
+set timeout 10
+
+log_user 0
+log_file -a /home/me/Downloads/log
+
+spawn sudo -k
+
+spawn sudo ls -l $search_dir
+expect "*?assword*"
+send -- "$password\n"
+expect eof#!/bin/bash

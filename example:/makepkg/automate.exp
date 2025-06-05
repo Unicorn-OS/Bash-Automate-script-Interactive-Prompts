@@ -4,10 +4,14 @@
 set password "u"
 set timeout 10
 log_user 0
-log_file -a /home/me/Downloads/log
+log_file -a ./log
 
 spawn sudo -k
 spawn makepkg -si
 expect "*?assword*"
 send -- "$password\n"
+
+expect "Proceed with installation? [Y/n]"
+send -- "y\n"
+
 expect eof

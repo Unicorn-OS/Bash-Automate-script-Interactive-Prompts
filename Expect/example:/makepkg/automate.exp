@@ -1,4 +1,5 @@
 #!/usr/bin/expect
+# https://github.com/Jguer/yay?tab=readme-ov-file#Installation
 # https://stackoverflow.com/questions/59686835/redirect-out-of-a-expect-spawned-process-to-a-log-file/59689925#59689925
 
 set password "u"
@@ -11,7 +12,7 @@ spawn makepkg -si
 expect "*?assword*"
 send -- "$password\n"
 
-expect "Proceed with installation? [Y/n]"
-send -- "y\n"
+#expect "Proceed with installation*?"
+#send -- "y\n"
 
 expect eof
